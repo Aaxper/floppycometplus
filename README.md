@@ -1,1 +1,1 @@
-# floppycometplus
+# Program to calculate god's number for the floppy comet plus
