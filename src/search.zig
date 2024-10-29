@@ -3,7 +3,7 @@ const tools = @import("tools.zig");
 const state_map = @import("state_map.zig");
 const std = @import("std");
 
-pub fn search() !void {
+pub fn search() void {
     const map = state_map.new();
     _ = state_map.update(map, 0);
 

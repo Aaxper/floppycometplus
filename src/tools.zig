@@ -55,12 +55,10 @@ pub fn cubeToIndex(cube: cubes.cubeType) usize {
 
 pub fn indexToCube(index: usize) cubes.cubeType {
     const centers: u4 = @intCast(index / (5040 * 5040));
-    const orbitOne: u13 = @intCast((index / 5040) % 5040);
-    const orbitTwo: u13 = @intCast(index % 5040);
 
     return cubes.cubeType{
-        .orbitOne = orbitOne,
-        .orbitTwo = orbitTwo,
+        .orbitOne = @intCast((index / 5040) % 5040),
+        .orbitTwo = @intCast(index % 5040),
         .centers = [4]u1{
             @intCast(centers % 2),
             @intCast((centers / 2) % 2),

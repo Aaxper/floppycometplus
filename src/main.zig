@@ -4,6 +4,6 @@ const std = @import("std");
 
 pub fn main() !void {
     std.debug.print("Search started\n", .{});
-    try search.search();
+    search.search();
     std.debug.print("Search completed\n", .{});
 }
